@@ -1,0 +1,5 @@
+Algorytmy Sortowania;Bubble Sort1;bubble_sort.py
+Algorytmy Sortowania;Bubble Sort2;bubble_sort.py
+Algorytmy Sortowania;Bubble Sort3;bubble_sort.py
+Algorytmy Sortowania;Bubble Sort4;bubble_sort.py
+Algorytmy Sortowania;Bubble Sort5;bubble_sort.py

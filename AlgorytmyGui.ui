@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>596</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Wizualizacja algorytmów</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/icon/images/plot.png</normaloff>:/icon/images/plot.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Tab 1</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QWebView" name="webView">
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="statusTip">
+           <string/>
+          </property>
+          <property name="url">
+           <url>
+            <string>about:blank</string>
+           </url>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Tab 2</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QWebView" name="webView2">
+          <property name="url">
+           <url>
+            <string>about:blank</string>
+           </url>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuOpcje">
+    <property name="title">
+     <string>Opcje</string>
+    </property>
+    <widget class="QMenu" name="menuZapisz_jako">
+     <property name="toolTip">
+      <string>Zapisz jako...</string>
+     </property>
+     <property name="statusTip">
+      <string>Wybierz format zapisu</string>
+     </property>
+     <property name="title">
+      <string>Zapisz jako ...</string>
+     </property>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/icon/images/save.png</normaloff>:/icon/images/save.png</iconset>
+     </property>
+     <addaction name="gifAction"/>
+     <addaction name="mpegAction"/>
+    </widget>
+    <addaction name="nowyAction"/>
+    <addaction name="menuZapisz_jako"/>
+    <addaction name="zamknijAction"/>
+   </widget>
+   <widget class="QMenu" name="menuEdycja">
+    <property name="title">
+     <string>Edycja</string>
+    </property>
+    <addaction name="renameAction"/>
+   </widget>
+   <widget class="QMenu" name="menuPomoc">
+    <property name="title">
+     <string>Pomoc</string>
+    </property>
+    <addaction name="pomocAction"/>
+    <addaction name="aboutAction"/>
+   </widget>
+   <addaction name="menuOpcje"/>
+   <addaction name="menuEdycja"/>
+   <addaction name="menuPomoc"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="libDockWidget">
+   <property name="features">
+    <set>QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Biblioteka algorytmów</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_4">
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTreeWidget" name="libTree">
+       <property name="headerHidden">
+        <bool>true</bool>
+       </property>
+       <column>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </column>
+       <item>
+        <property name="text">
+         <string>Sortowanie</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Quick Sort</string>
+         </property>
+        </item>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="inputDockWidget">
+   <property name="features">
+    <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Parametry wejściowe</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_5">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QFrame" name="frame">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QTabWidget" name="optionsTabWidget">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="optionsTab1">
+           <attribute name="title">
+            <string>Tab 1</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="optionsTab2">
+           <attribute name="title">
+            <string>Tab 2</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="runButton">
+       <property name="statusTip">
+        <string>Uruchamia wizualizację z wybranymi parametrami wejściowymi</string>
+       </property>
+       <property name="text">
+        <string>Uruchom</string>
+       </property>
+       <property name="icon">
+        <iconset resource="icons.qrc">
+         <normaloff>:/icon/images/3d graph.png</normaloff>:/icon/images/3d graph.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="zamknijAction">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icon/images/exit.png</normaloff>:/icon/images/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zamknij</string>
+   </property>
+   <property name="iconText">
+    <string>Zamknij</string>
+   </property>
+   <property name="toolTip">
+    <string>Zamknij</string>
+   </property>
+   <property name="statusTip">
+    <string>Kończy działanie aplikacji</string>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+  </action>
+  <action name="nowyAction">
+   <property name="text">
+    <string>Nowy</string>
+   </property>
+  </action>
+  <action name="aboutAction">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icon/images/about.png</normaloff>:/icon/images/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>O programie</string>
+   </property>
+   <property name="statusTip">
+    <string>Wyświetla okno z informacją o programie</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutRole</enum>
+   </property>
+  </action>
+  <action name="pomocAction">
+   <property name="text">
+    <string>Pomoc</string>
+   </property>
+  </action>
+  <action name="renameAction">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icon/images/rename.png</normaloff>:/icon/images/rename.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zmień nazwę</string>
+   </property>
+   <property name="statusTip">
+    <string>Zmienia nazwę algorytmu</string>
+   </property>
+  </action>
+  <action name="gifAction">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icon/images/gif.png</normaloff>:/icon/images/gif.png</iconset>
+   </property>
+   <property name="text">
+    <string>GIF</string>
+   </property>
+   <property name="statusTip">
+    <string>Zapisuje wizualizację w pliku GIF</string>
+   </property>
+  </action>
+  <action name="mpegAction">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icon/images/mpeg.png</normaloff>:/icon/images/mpeg.png</iconset>
+   </property>
+   <property name="text">
+    <string>MPEG</string>
+   </property>
+   <property name="statusTip">
+    <string>Zapisuje wizualizację w pliku MPEG</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKit/QWebView</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>zamknijAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>297</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

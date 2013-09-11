@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>images/rename.png</file>
+    <file>images/about.png</file>
+    <file>images/3d graph.png</file>
+    <file>images/exit.png</file>
+    <file>images/gif.png</file>
+    <file>images/mpeg.png</file>
+    <file>images/plot.png</file>
+    <file>images/Save image.png</file>
+    <file>images/save.png</file>
+  </qresource>
+</RCC>
